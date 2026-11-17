@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration Form</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: lightblue;
+        }
+
+        h2 {
+            text-align: center;
+            color: darkblue;
+        }
+
+        form {
+            background-color: white;
+            width: 400px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            border: 1px solid gray;
+            border-radius: 5px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            width: auto;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: blue;
+            color: white;
+            cursor: pointer;
+            width: 48%;
+        }
+
+        input[type="reset"] {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Student Registration Form</h2>
+
+<form>
+
+    <label>Full Name:</label>
+    <input type="text" name="name"
+    placeholder="Enter your name" required>
+
+    <label>Email:</label>
+    <input type="email" name="email"
+    placeholder="Enter your email" required>
+
+    <label>Password:</label>
+    <input type="password" name="password"
+    placeholder="Enter password" minlength="6" required>
+
+    <label>Mobile Number:</label>
+    <input type="tel" name="mobile"
+    placeholder="Enter mobile number"
+    pattern="[0-9]{10}" required>
+
+    <label>Date of Birth:</label>
+    <input type="date" name="dob" required>
+
+    <label>Gender:</label><br>
+    <input type="radio" name="gender" value="Male" required> Male
+
+    <input type="radio" name="gender" value="Female"> Female
+
+    <input type="radio" name="gender" value="Other"> Other
+
+    <br><br>
+
+    <label>Select Course:</label>
+    <select name="course" required>
+        <option value="">Select Course</option>
+        <option>BCA</option>
+        <option>BBA</option>
+        <option>B.Tech</option>
+        <option>MCA</option>
+        <option>MBA</option>
+    </select>
+
+    <label>Address:</label>
+    <textarea name="address"
+    placeholder="Enter your address"
+    rows="3" required></textarea>
+
+    <label>Hobbies:</label><br>
+    <input type="checkbox" name="hobby" value="Reading"> Reading
+
+    <input type="checkbox" name="hobby" value="Sports"> Sports
+
+    <input type="checkbox" name="hobby" value="Music"> Music
+
+    <br><br>
+
+    <label>Upload Photo:</label>
+    <input type="file" name="photo" accept="image/*">
+
+    <br>
+
+    <input type="submit" value="Register">
+    <input type="reset" value="Reset">
+
+</form>
+
+</body>
+</html>
